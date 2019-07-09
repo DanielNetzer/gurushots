@@ -1,0 +1,8 @@
+@import "../../../variables.scss";
+
+:host {
+  margin-top: $navbar-height;
+  height: 100%;
+  width: 100%;
+  display: block;
+}

@@ -1,0 +1,29 @@
+@import "../../../variables.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20% 0 30%;
+
+  .story {
+    font-size: 18px;
+  }
+
+  .cta {
+    text-align: left;
+    width: 100%;
+    a {
+      font-weight: bold;
+      color: black;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  :host {
+    padding: 0 20px 0 10px;
+  }
+}

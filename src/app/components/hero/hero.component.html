@@ -1,0 +1,5 @@
+<h1>{{ title ? title : "Where's my title?" }}</h1>
+<p class="story">{{ story ? story : "Nothing to tell here..." }}</p>
+<div class="cta" *ngIf="cta">
+  <a [routerLink]="[cta.link]">{{ cta.text }}</a>
+</div>

@@ -1,0 +1,10 @@
+<div class="title">
+  <h1>Oops, seems like you've ended in the wrong place</h1>
+</div>
+<iframe
+  *ngIf="gifUrl; else loading"
+  [src]="gifUrl"
+  frameBorder="0"
+  allowFullScreen
+></iframe>
+<ng-template #loading>Loading...</ng-template>

@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+
+  h1 {
+    font-size: 3em;
+  }
+
+  a {
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #1272e1;
+    }
+  }
+
+  *:focus {
+    outline: none;
+  }
+}

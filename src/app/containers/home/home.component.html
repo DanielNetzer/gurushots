@@ -1,0 +1,43 @@
+<div class="overlay">
+  <div class="first row">
+    <gs-hero
+      class="first-hero"
+      [title]="heroes[0].title"
+      [story]="heroes[0].story"
+      [cta]="heroes[0].cta"
+    ></gs-hero>
+    <div class="img-block"><img src="assets/capture.PNG" /></div>
+  </div>
+  <div class="second row">
+    <div class="gallery">
+      <div
+        class="img-block gallery-block"
+        *ngFor="let badgedImg of gallery; let i = index"
+      >
+        <img #galleryImg class="badged-img" [src]="badgedImg.imageLink" />
+        <div #imgBadge *ngIf="badgedImg.badgeLink" class="badge img-block">
+          <img [src]="badgedImg.badgeLink" />
+        </div>
+      </div>
+    </div>
+    <gs-hero
+      class="second-hero"
+      [title]="heroes[0].title"
+      [story]="heroes[0].story"
+      [cta]="heroes[0].cta"
+    ></gs-hero>
+  </div>
+</div>
+<div class="underlay">
+  <div class="third row">
+    <gs-hero
+      class="third-hero"
+      [title]="heroes[0].title"
+      [story]="heroes[0].story"
+      [cta]="heroes[0].cta"
+    ></gs-hero>
+    <div class="img-block third-img-container">
+      <div class="third-img">&nbsp;</div>
+    </div>
+  </div>
+</div>

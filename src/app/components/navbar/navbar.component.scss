@@ -1,0 +1,58 @@
+@import "../../../variables.scss";
+
+:host {
+  z-index: 100;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: $navbar-height;
+  background-color: #1f1e1f;
+
+  .navbar-container {
+    display: flex;
+    color: white;
+    padding: 0 5rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    .logo-text {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .right-hand {
+      display: flex;
+      .navigation {
+        margin-right: 5rem;
+        a:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+
+      .sign {
+        a:not(:last-child) {
+          margin-right: 2rem;
+        }
+
+        .up {
+          border: 2px solid white;
+          border-radius: 10px;
+          padding: 8px 15px;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            border-color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// at 1000px create a breakpoint and disappear the entire menu and show hamburger on the right side
+@media only screen and (max-width: 1000px) {
+  .right-hand {
+    opacity: 0;
+  }
+}
